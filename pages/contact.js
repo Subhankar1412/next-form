@@ -3,11 +3,6 @@ import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 function Validate() {
  const {register,handleSubmit,formState:{errors}}=useForm(); console.log(errors);
- const myfunction=(values)=>{
-     alert("submited");
-     console.log(values);
-    //  form1.submit();
- }
 
 
     const [fnameerr, setfnameerr] = useState("");
@@ -122,52 +117,29 @@ const [response, setResponse] = useState(null);
                     <div className="row mb-3">
                         <label htmlFor="firstname" className="col-sm-2 col-form-label">First Name</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control" name='firstname' id="firstname"
-                            //  {...register('firstname',{required:true})}
-                             />
+                            <input type="text" className="form-control" name='firstname' id="firstname"/>
                             <span className='text-danger'>{fnameerr}</span>
-                            {/* {errors.firstname && errors.firstname.type=="required" && <p className='text-danger'>Please enter youre first name</p>} */}
                         </div>
                     </div>
                     <div className="row mb-3">
                         <label htmlFor="lastname" className="col-sm-2 col-form-label">Last Name</label>
                         <div className="col-sm-10" >
-                            <input type="text" className="form-control" name='lastname' id="lastname" 
-                            // {...register('lastname',{required:true})}
-                             />
+                            <input type="text" className="form-control" name='lastname' id="lastname" />
                              <span className='text-danger'>{lnameerr}</span>
-                            {/* {errors.lastname && errors.lastname.type=="required" && <p className='text-danger'>enter youre Last name</p>} */}
                         </div>
                     </div>
                     <div className="row mb-3">
                         <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
                         <div className="col-sm-10">
-                            <input 
-                            type="text" 
-                            className="form-control" 
-                            id="email"
-                            name='email' 
-                            // {...register(
-                            //     'email',{
-                            //         required:{
-                            //             value:true,
-                            //             message:" enter a valid email"
-                            //         }
-                            //     }
-                            // )}
-                            />
+                            <input  type="text"  className="form-control" id="email" name='email' />
                             <span className='text-danger'>{eerr}</span>
-                            {/* <span><p className='text-danger'>{errors?.email?.message}</p></span> */}
                         </div>
                     </div>
                     <div className="row mb-3">
                         <label htmlFor="contact" className="col-sm-2 col-form-label">Contact No.</label>
                         <div className="col-sm-10">
-                            <input type="text" className="form-control" name='contact' id="contact" /*{...register('contact',{required:true, minLength:10, maxLength:10})}*//>
+                            <input type="text" className="form-control" name='contact' id="contact" />
                             <span className='text-danger'>{cerr}</span>
-                            {/* {errors.contact && errors.contact.type=="required" && <p className='text-danger'>enter a valid contact no</p>}
-                            {errors.contact && errors.contact.type=="minLength" && <p className='text-warning'>youre number shouldn't be less than 10</p>}
-                            {errors.contact && errors.contact.type=="maxLength" && <p className='text-warning'>youre number shouldn't be more than 10</p>} */}
                         </div>
                     </div>
                     <button type="submit"   className="btn btn-success button-design" >Submit</button>
