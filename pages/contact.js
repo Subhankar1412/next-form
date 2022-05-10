@@ -80,16 +80,24 @@ function Validate() {
 
     
     var cno=/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+    var icno=/^(?:\+|00|011)[0-9 ().-]+$/;
     if (e.target.contact.value==="") {
         setcerr("yo can't leave it blank");
         return false;
     }
     else{
-        if(!cno.test(e.target.contact.value))
+        if(cno.test(e.target.contact.value))
         {
-            setcerr("invalid contact no")
-            return false;
+            // setcerr("invalid contact no")
+            // return false;
             
+        }
+        else if(icno.test(e.target.contact.value)){
+            // setcerr("invalid contact noi")
+            // return false;
+        }else{
+            setcerr("invalid contact noi")
+             return false;
         }
         setcerr("");
     }

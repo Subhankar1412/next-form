@@ -15,5 +15,5 @@ model Playlist {
   firstname       String
   lastname        String
   uemail         String
-  contactno       Int
+  contactno       String
 }
